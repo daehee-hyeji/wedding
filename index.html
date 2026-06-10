@@ -741,11 +741,19 @@
             line-height: 1.7;
         }
 
+        .map-label {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #9a8453;
+            margin-top: 22px;
+        }
+
         .map-buttons {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-top: 18px;
+            margin-top: 12px;
             flex-wrap: wrap;
         }
 
@@ -767,6 +775,18 @@
             background-color: #c9b99a;
             color: #fff;
             border-color: #c9b99a;
+        }
+
+        .map-btn.nav {
+            font-weight: 400;
+            color: #fff;
+            background-color: #c9a86f;
+            border-color: #c9a86f;
+        }
+
+        .map-btn.nav:hover {
+            background-color: #b3925a;
+            border-color: #b3925a;
         }
 
         .transit {
@@ -1300,10 +1320,16 @@
             <div class="map-embed" id="map">
                 <div class="map-fallback" id="mapFallback">지도를 불러오는 중입니다…</div>
             </div>
+            <div class="map-label">지도 보기</div>
             <div class="map-buttons">
                 <a class="map-btn" href="https://map.naver.com/v5/search/가천컨벤션센터" target="_blank" rel="noopener">네이버</a>
                 <a class="map-btn" href="https://map.kakao.com/?q=가천컨벤션센터" target="_blank" rel="noopener">카카오</a>
-                <a class="map-btn" href="tmap://route?goalname=%EA%B0%80%EC%B2%9C%EC%BB%A8%EB%B2%A4%EC%85%98%EC%84%BC%ED%84%B0&goalx=127.1281&goaly=37.4503" rel="noopener">T맵</a>
+            </div>
+            <div class="map-label">내비게이션 길찾기</div>
+            <div class="map-buttons">
+                <a class="map-btn nav" href="nmap://route/car?dlat=37.4503&dlng=127.1281&dname=%EA%B0%80%EC%B2%9C%EC%BB%A8%EB%B2%A4%EC%85%98%EC%84%BC%ED%84%B0" rel="noopener">네이버내비</a>
+                <a class="map-btn nav" href="https://map.kakao.com/link/to/가천컨벤션센터,37.4503,127.1281" target="_blank" rel="noopener">카카오내비</a>
+                <a class="map-btn nav" href="tmap://route?goalname=%EA%B0%80%EC%B2%9C%EC%BB%A8%EB%B2%A4%EC%85%98%EC%84%BC%ED%84%B0&goalx=127.1281&goaly=37.4503" rel="noopener">T맵</a>
             </div>
         </div>
 
